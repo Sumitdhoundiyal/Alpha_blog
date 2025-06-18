@@ -3,6 +3,5 @@ require_relative "application"
 
 # Initialize the Rails application.
 Rails.application.initialize!
-ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|More actions
-  html_tag.html_safe
+ActionView::Base.field_error_proc = Proc.new do |html_tag, _instance|More actions html_tag.html_safe
 end

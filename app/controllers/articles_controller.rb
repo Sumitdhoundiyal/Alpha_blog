@@ -42,9 +42,6 @@ class ArticlesController < ApplicationController
 
    end
 
-   def sumit
-
-   end
 
    private
 
