@@ -49,3 +49,4 @@ end
  gem "bootstrap", "~> 5.3.0"
 
 gem 'bcrypt', '~> 3.1.0'
+gem 'will_paginate', '~> 4.0'
