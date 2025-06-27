@@ -1,15 +1,3 @@
-<%
-=begin%>
- <h1> Showing article details </h1>
-<p><strong> Title:  </strong> <%= @article.title %> </p>
-<p><strong> Discription:  </strong> <%= @article.discription%></p>
-
-<%= link_to 'Edit', edit_article_path(@article)%>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure you want to delete this article?" } %>
-<%= link_to 'Return to articles listing', articles_path %>
-<%
-=end%>
-
 <h2 class="text-center mt-4"><%= @article.title %></h2>
 <div class="container">
   <div class="row justify-content-md-center">
@@ -17,8 +5,9 @@
       <div class="card text-center shadow mb-5 bg-white rounded">
         <div class="card-header font-italic">
           by <%= @article.user.username if @article.user %>
-          <%= link_to gravatar_for(@article.user), user_path(@article.user)>
+          <%= link_to gravatar_for(@article.user), user_path(@article.user)%>
         </div>
+
         <div class="card-body">
           <div class="card-text text-left"><%= simple_format(@article.discription) %></div>
           <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info" %>
